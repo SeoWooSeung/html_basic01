@@ -5,10 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>01_css 우선 순위</title>
-    <!-- 내부 style sheet : Internal style sheet -->
+    <!-- 외부 style sheet : Internal style sheet -->
+    <!-- 다수의 웹페이지 수정에 아주 유리하다 -->
     <link rel="stylesheet" href="./경로">
 
-    <!-- 외부 style sheet : External style sheet -->
+    <!-- 내부 style sheet : External style sheet -->
+    <!-- css !important 모든 스타일에서 최우선한다. -->
     <style>
         h1 {
             color: blue !important;
@@ -19,6 +21,7 @@
 
 <body>
     <!-- inline style sheet -->
+    <!-- 내부,외부 스타일 보다 우선한다. javascript가 실행되는 영역이다. -->
     <h1 style="color: red;">css 우선 순위</h1>
     <div class="box">A</div>
 </body>

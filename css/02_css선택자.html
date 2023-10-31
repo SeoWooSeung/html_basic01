@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>02_css선택자</title>
+    <style>
+        /* div, section 박스에는 무조건 class를 붙힌다 */
+        /* div, section가 선택자가 되지 않게 한다  */
+
+        /*각 유형의 선택자는 계급을 가지고 그 계급을 넘어설 수 없다.
+        id : 100
+        class: 10
+        tag : 1
+        */
+
+
+        /* tag selector */
+        div {
+            color: red;
+        }
+
+        /* id  selector */
+        #box {
+            color: #ff0;
+        }
+
+        /* class selector */
+        .box {
+            color: #369;
+        }
+
+        * {
+            /* 단체 선택자 
+            :reset, 자식들의 tag가 다를 때 전체 자식의 선택
+             */
+            font-size: 30px;
+        }
+
+        /* 자식 선택자: 바로 아래에 자식만 선택한다
+        :드롭다운 메뉴 만들시 등,국한된 용도에 사용합니다.(같은 tag가 하위에 중첩될 때, 하위 tag)
+         */
+        .mbox>* {
+            font-weight: bold;
+            font-size: 40px;
+        }
+
+        /* 하위선택자(후손선택자) : 자식을 비롯한 아래 레벨의 모든 것을 선택한다 */
+
+        .mbox * {
+            color: #ff0;
+            font-size: 40px;
+        }
+
+        /* 그룹 선택자 */
+        .mbox h2,
+        .mbox p,
+        .mbox div,
+        .mbox figure {
+            font-size: 18px;
+        }
+
+
+        .mbox h2:nth-child(1)
+
+        .mbox p:nth-child(2) 
+
+        .mbox h2:nth-of-type(1) 
+
+        .mbox p:nth-of-type(1) 
+
+        /* 형제 선택자 뒤 형제 선택*/
+        .mbox h2~p 
+
+        /* 인접형제 선택자 바로 뒤 형제만 선택*/
+        .mbox h2~figure 
+
+        /* 종속선택자 */
+        #box.box 
+    </style>
+
+
+</head>
+
+<body>
+    <div> tag selector </div>
+    <div class id="box" class="box">id selector</div>
+    <div class="box">class selector</div>
+
+    <p>Lorem ipsum dolor sit.</p>
+
+    <section class="mbox">
+        <h2>Lorem ipsum dolor sit.</h2>
+        <p>Lorem ipsum dolor sit. </p>
+        <div>Lorem ipsum dolor sit.</div>
+        <figure>Lorem ipsum dolor sit.</figure>
+    </section>
+</body>
+
+</html>
