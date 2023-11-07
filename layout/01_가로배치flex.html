@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_가로배치flex</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        ul,
+        ol,
+        li {
+            list-style: none;
+
+        }
+
+        body {
+            line-height: 1;
+        }
+    </style>
+    <style>
+        .header {
+            margin: 0 0 100px 0;
+            background: #f9f9f9;
+            line-height: 100px;
+        }
+
+        .h01 {
+            /* 자식 박스들의 가로배치 */
+            display: flex;
+            justify-content: flex-start
+        }
+
+        .h02 {
+            display: flex;
+            /* 가로배치된 박스의 위치 */
+            justify-content: center;
+        }
+
+        .h03 {
+            display: flex;
+            /* 가로배치된 박스의 위치의 오른쪽 */
+            justify-content: flex-end;
+        }
+
+        .h04 {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .h05 {
+            display: flex;
+        }
+
+        .h05 nav {
+            /* flex된 박스의 왼쪽 이빠이 마진을 줘서 오른쪽으로 밀어냄.  */
+            margin: 0 0 0 auto;
+        }
+
+        .h06 .inner {
+            display: flex;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .h06 .inner .left {
+            display: flex;
+        }
+
+        .h06 .inner .right {
+            display: flex;
+            margin: 0 0 0 auto;
+        }
+
+        .tang {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 80px;
+        }
+
+        .tang .gnb>ul {
+            display: flex;
+            gap: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header h01">
+        <h1>LOGO</h1>
+        <nav>menu</nav>
+    </header>
+    <hr />
+    <header class="header h02">
+        <h1>LOGO</h1>
+        <nav>menu</nav>
+    </header>
+    <header class="header h03">
+        <h1>LOGO</h1>
+        <nav>menu</nav>
+    </header>
+    <header class="header h04">
+        <h1>LOGO</h1>
+        <nav>menu</nav>
+    </header>
+    <header class="header h05">
+        <h1>LOGO</h1>
+        <nav>menu</nav>
+    </header>
+    <header class="header h06">
+        <div class="inner">
+            <div class="left">
+                <div>01</div>
+                <div>02</div>
+            </div>
+
+            <div class="right">
+                <div>03</div>
+                <div>04</div>
+            </div>
+        </div>
+    </header>
+    <hr>
+
+    <header class="header tang">
+        <h1>탕후루</h1>
+        <nav class="gnb">
+            <ul>
+                <li><a href="">menu01</a></li>
+                <li><a href="">menu02</a></li>
+                <li><a href="">menu03</a></li>
+                <li><a href="">menu04</a></li>
+            </ul>
+        </nav>
+        <div class="util">
+            icon
+        </div>
+    </header>
+</body>
+
+</html>

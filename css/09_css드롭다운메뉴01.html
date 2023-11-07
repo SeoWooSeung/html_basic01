@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09_css드롭다운메뉴01</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        ul,
+        ol {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .main {
+            position: relative;
+            height: 600px;
+            background: url(../images/mainvisual01.jpg)no-repeat center center/cover;
+        }
+
+        .inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+
+        }
+
+        .header .inner {
+            display: flex;
+        }
+
+        .header {
+            background: #f9f9f9;
+            line-height: 100px;
+            z-index: 1;
+            position: relative;
+        }
+
+        .header .gnb {
+            margin: 0 0 0 auto;
+            z-index: 1;
+            position: relative;
+        }
+
+        .header .gnb>ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        .header .gnb>ul>li {
+            position: relative;
+        }
+
+        .header .gnb .sub {
+            position: absolute;
+            top: 100px;
+            left: 0;
+            background: tomato;
+            z-index: 1;
+
+            display: none;
+
+            line-height: 40px;
+        }
+
+        .header:hover .gnb>ul>li .sub {
+            display: block;
+        }
+
+        .header::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 200px;
+            background: tomato;
+            display: none;
+        }
+
+
+        .header:hover::after {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="inner">
+                <h1>LOGO</h1>
+                <nav class="gnb">
+                    <ul>
+                        <li>
+                            <a href="">MENU01</a>
+                            <ul class="sub">
+                                <li><a href="">smenu01</a></li>
+                                <li><a href="">smenu02</a></li>
+                                <li><a href="">smenu03</a></li>
+                                <li><a href="">smenu04</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">MENU01</a>
+                            <ul class="sub">
+                                <li><a href="">smenu01</a></li>
+                                <li><a href="">smenu02</a></li>
+                                <li><a href="">smenu03</a></li>
+                                <li><a href="">smenu04</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">MENU01</a>
+                            <ul class="sub">
+                                <li><a href="">smenu01</a></li>
+                                <li><a href="">smenu02</a></li>
+                                <li><a href="">smenu03</a></li>
+                                <li><a href="">smenu04</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">MENU01</a>
+                            <ul class="sub">
+                                <li><a href="">smenu01</a></li>
+                                <li><a href="">smenu02</a></li>
+                                <li><a href="">smenu03</a></li>
+                                <li><a href="">smenu04</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">MENU01</a>
+                            <ul class="sub">
+                                <li><a href="">smenu01</a></li>
+                                <li><a href="">smenu02</a></li>
+                                <li><a href="">smenu03</a></li>
+                                <li><a href="">smenu04</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="">MENU01</a>
+                            <ul class="sub">
+                                <li><a href="">smenu01</a></li>
+                                <li><a href="">smenu02</a></li>
+                                <li><a href="">smenu03</a></li>
+                                <li><a href="">smenu04</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <main class="main">
+
+        </main>
+        <footer class="footer">
+            &copy;seo
+        </footer>
+    </div>
+</body>
+
+</html>
