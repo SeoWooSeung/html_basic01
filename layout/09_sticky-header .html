@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fixed header</title>
+    <link rel="stylesheet" href="../assets/reset.css">
+    <link rel="stylesheet" href="../assets/font.css">
+
+    <script src="../assets/jquery-1.12.4.min.js"></script>
+    <style>
+        /*.wrap {
+            overflow: hidden;
+        }*/
+
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 999;
+            background: #fff;
+            line-height: 80px;
+            border-bottom: 1px solid transparent;
+        }
+
+        .header h1 a {
+            display: inline-block;
+            width: 110px;
+            height: 30px;
+            background: url(../assets/logo_basic.png)no-repeat;
+            font-size: 0;
+            vertical-align: middle;
+
+        }
+
+        .header .header_wrap {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 80px
+        }
+
+        .gnb>ul {
+            display: flex;
+            gap: 40px;
+        }
+
+        .main {
+            position: relative;
+            z-index: 1;
+        }
+
+        .mainVisual {
+            position: relative;
+        }
+
+        .mainVisual .scroll {
+            position: absolute;
+            bottom: 100px;
+            left: 50%;
+            transform: translate(-50%, 0);
+
+            font-size: 0;
+            width: 32px;
+            height: 48px;
+            border: 2px solid #fff;
+            border-radius: 16px;
+        }
+
+        .mainVisual .scroll::after {
+            content: "";
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translate(-50%, 0);
+
+            width: 4px;
+            height: 10px;
+            background: #fff;
+            border-radius: 2px;
+
+            animation: wheel 0.8s infinite;
+        }
+
+        @keyframes wheel {
+            0% {
+                transform: translate(-50%, 0);
+            }
+
+            100% {
+                transform: translate(-50%, 30%);
+            }
+        }
+
+        .visualMovie video {
+            width: 100%;
+            height: calc(100vh - 81px);
+            vertical-align: middle;
+            object-fit: cover;
+        }
+
+        .mainContent {
+            padding: 120px 0;
+        }
+
+        .mainContent .title {
+            max-width: 1200px;
+            margin: 0 auto 32px auto;
+            padding: 0 15px;
+        }
+
+        .mainContent .title h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0 0 16px 0;
+            text-indent: -2px;
+        }
+
+        .mainContent .title p {
+            font-size: 16px;
+        }
+
+        .mainContent .inner {
+            display: flex;
+            gap: 30px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .mainContent .inner figure {
+            flex: 1;
+        }
+
+        .footer {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 32px 0;
+            margin: 0 0 100vh 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <header class="header">
+            <div class="header_wrap">
+                <h1>
+                    <a href="/">
+                        <span>LG</span>
+                    </a>
+                </h1>
+                <nav class="gnb">
+                    <ul>
+                        <li><a href=""> 하이주얼리</a></li>
+                        <li><a href=""> 주얼리 컬렉션</a></li>
+                        <li><a href=""> 컬렉션 & 브라이덜</a></li>
+                        <li><a href=""> 웨딩주얼리</a></li>
+                        <li><a href=""> 특별한 솔리테어</a></li>
+                    </ul>
+                </nav>
+                <div class="search">
+                    <i class="xi-search"></i>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="mainVisual">
+                <div class="visualMovie">
+                    <video src="../assets/m03.mp4" autoplay muted playsinline loop></video>
+                </div>
+                <a href="" class="scroll">
+                    scroll
+                </a>
+            </section>
+            <section class="mainContent">
+                <div class="title">
+                    <h2>Lorem ipsum dolor sit.</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi, inventore?</p>
+                </div>
+                <div class="inner">
+                    <figure>
+                        <div class="img_box">
+                            <img src="../images/mainvisual01.jpg" alt="">
+                        </div>
+                    </figure>
+                    <figure>
+                        <div class="img_box">
+                            <img src="../images/mainvisual02.jpg" alt="">
+                        </div>
+                    </figure>
+                    <figure>
+                        <div class="img_box">
+                            <img src="../images/mainvisual03.jpg" alt="">
+                        </div>
+                    </figure>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            &copy;SEO
+        </footer>
+    </div>
+    <script>
+        $(function () {
+
+        })
+    </script>
+</body>
+
+</html>
